@@ -2,7 +2,7 @@
 
 A responsive and elegant e-commerce landing page for premium dates.
 
-## Features
+## Features  
 
 - Smooth scroll navigation
 - Responsive design (desktop, tablet, mobile)
