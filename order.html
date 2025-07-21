@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body.bd {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f4f1ee, #e8ddd0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 450px;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .order-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #a27c45;
+    }
+
+    .order-form input,
+    .order-form select {
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .order-form input:focus,
+    .order-form select:focus {
+      border-color: #a27c45;
+      outline: none;
+    }
+
+    .prixtot {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f7f7f7;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #a27c45;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #8c6534;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bd">
+  <div class="container">
+    <form class="order-form">
+      <h2>Place Your Order</h2>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Address" required>
+      <input type="tel" placeholder="Phone" required>
+      <select required>
+        <option disabled selected>Select a box</option>
+        <option>Box 1</option>
+        <option>Box 2</option>
+        <option>Box 3</option>
+        <option>Box 4</option>
+        <option>Box 5</option>
+        <option>Box 6</option>
+      </select>
+      <input type="number" placeholder="1" value="1" min="1" required>
+      <div class="prixtot">
+        <span>Total :</span>
+        <span>19.99 €</span>
+      </div>
+      <button type="submit" class="btn">SUBMIT</button>
+    </form>
+  </div>
+</body>
+</html>
